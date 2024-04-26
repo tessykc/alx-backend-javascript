@@ -1,12 +1,12 @@
 class Building {
-    constructor(sqft) {
-        // Verify the type of attribute during object creation
-        if (typeof sqft !== 'number') {
-            throw new Error('Invalid attribute type for sqft');
-        }
+  constructor(sqft) {
+    // Verify the type of attribute during object creation
+    if (typeof sqft !== 'number') {
+      throw new Error('Invalid attribute type for sqft');
+    }
 
-        // Store attribute with an underscore prefix
-        this._sqft = sqft;
+    // Store attribute with an underscore prefix
+    this._sqft = sqft;
     }
 
     // Getter for sqft
@@ -16,6 +16,6 @@ class Building {
 
     // Abstract method: subclasses must override this method
     evacuationWarningMessage() {
-        throw new Error('Class extending Building must override evacuationWarningMessage');
+      throw new Error('Class extending Building must override evacuationWarningMessage');
     }
 }

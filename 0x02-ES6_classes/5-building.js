@@ -7,15 +7,15 @@ class Building {
 
     // Store attribute with an underscore prefix
     this._sqft = sqft;
-    }
+  }
 
-    // Getter for sqft
-    get sqft() {
-        return this._sqft;
-    }
+  // Getter for sqft
+  get sqft() {
+    return this._sqft;
+  }
 
-    // Abstract method: subclasses must override this method
-    evacuationWarningMessage() {
-      throw new Error('Class extending Building must override evacuationWarningMessage');
-    }
+  // Abstract method: subclasses must override this method
+  evacuationWarningMessage() {
+    throw new Error('Class extending Building must override evacuationWarningMessage');
+  }
 }

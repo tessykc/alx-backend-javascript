@@ -1,15 +1,15 @@
 // Import the Currency class from 3-currency.js
-import Currency from './3-currency.js';
+import Currency from './3-currency';
 
 class Pricing {
   constructor(amount, currency) {
   // Verify the type of attributes during object creation
-   if (typeof amount !== 'number' || !(currency instanceof Currency)) {
-     throw new Error('Invalid attribute types');
+    if (typeof amount !== 'number' || !(currency instanceof Currency)) {
+      throw new Error('Invalid attribute types');
     }
-  // Store attributes with an underscore prefix
-  this._amount = amount;
-  this._currency = currency;
+    // Store attributes with an underscore prefix
+    this._amount = amount;
+    this._currency = currency;
   }
 
   // Getter for amount
@@ -40,7 +40,7 @@ class Pricing {
 
   // Method to display the full price format
   displayFullPrice() {
-  const { name, code } = this._currency;
+    const { name, code } = this._currency;
     return `${this._amount} ${name} (${code})`;
   }
 
@@ -50,5 +50,5 @@ class Pricing {
       throw new Error('Amount and conversionRate must be numbers');
     }
     return amount * conversionRate;
-}
+  }
 }

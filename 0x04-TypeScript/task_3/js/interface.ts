@@ -1,15 +1,8 @@
-// interface.ts
+// task_3/js/interface.ts
+export type RowID = number;
 
-// Define the RowID type
-type RowID = number;
-
-// Define the RowElement interface
-interface RowElement {
+export interface RowElement {
   firstName: string;
   lastName: string;
-  age?: number; // The "?" indicates that the 'age' field is optional
+  age?: number;
 }
-
-// Export the types and interfaces
-export { RowID, RowElement };
-

@@ -1,23 +1,21 @@
-// Cpp.ts
+/// <reference path="Teacher.ts" />
+/// <reference path="Subject.ts" />
 
 namespace Subjects {
   export interface Teacher {
-    experienceTeachingC?: number; // Optional attribute
+    experienceTeachingC?: number;
   }
 
-  // New class: Cpp
   export class Cpp extends Subject {
     getRequirements(): string {
-      return "Here is the list of requirements for Cpp:\n- ..."; // Add actual requirements
+      return 'Here is the list of requirements for Cpp';
     }
 
-  // Method to get available teacher for Cpp
-  getAvailableTeacher(teacher: Teacher): string {
-    if (teacher.experienceTeachingC) {
-      return `Available Teacher: ${teacher.firstName}`;
-    } else {
-        return "No available teacher";
-    }
+    getAvailableTeacher(): string {
+      if (!this.teacher.experienceTeachingC) {
+        return 'No available teacher';
+      }
+      return `Available Teacher: ${this.teacher.firstName}`;
     }
   }
 }
